@@ -1,0 +1,232 @@
+@use 'sass:color';
+
+$primary-color: #f5a623;
+$secondary-color: #111;
+$text-color: #fff;
+$background-color: #222;
+$highlight-color: #e59420;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $secondary-color;
+    color: $text-color;
+}
+
+header {
+    background-color: $primary-color;
+    padding: 50px 0;
+    text-align: center;
+    
+    h1 {
+        font-size: 2.5rem;
+        color: $text-color;
+    }
+
+    .features {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 20px;
+
+        .feature-item {
+            text-align: center;
+
+            i {
+                font-size: 2rem;
+                color: $text-color;
+            }
+
+            p {
+                margin-top: 10px;
+                color: $text-color;
+            }
+        }
+    }
+}
+
+#services {
+    padding: 50px 20px;
+    background-color: $background-color;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .service-item {
+            background-color: $secondary-color;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: color.adjust($text-color, $lightness: 20%);
+            }
+        }
+    }
+}
+
+#testimonials {
+    padding: 50px 20px;
+    background-color: $secondary-color;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .testimonial-item {
+            background-color: $background-color;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    }
+}
+
+#contact {
+    padding: 50px 20px;
+    background-color: $background-color;
+    text-align: center;
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: $primary-color;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: $text-color;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: $highlight-color;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $secondary-color;
+    padding: 10px 0;
+    text-align: center;
+    color: $text-color;
+    margin-top: 20px;
+
+    p {
+        margin: 0;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    
+    img {
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    span {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    li {
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #f5a623;
+            }
+        }
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+
+        a {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+
+            i {
+                margin-left: 5px;
+            }
+
+            &:hover {
+                color: #f5a623;
+            }
+        }
+    }
+}
