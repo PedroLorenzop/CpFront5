@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -170,27 +169,27 @@ body {
   margin-bottom: 30px;
   color: #fff;
 }
-#differentials .differentials-list {
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
+#differentials .differentials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
   margin: 0 auto;
-  text-align: left;
 }
-#differentials .differentials-list li {
-  font-size: 1.2rem;
-  margin: 15px 0;
-  position: relative;
-  padding-left: 25px;
-  color: #fff;
+#differentials .differentials-grid .differential-item {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
 }
-#differentials .differentials-list li:before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
+#differentials .differentials-grid .differential-item h3 {
   font-size: 1.5rem;
-  color: #e59420;
+  margin-bottom: 10px;
+  color: #f5a623;
+}
+#differentials .differentials-grid .differential-item p {
+  color: hsl(0, 0%, 120%);
+  font-size: 1rem;
 }
 
 #contact {

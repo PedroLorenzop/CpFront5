@@ -196,6 +196,7 @@ body {
 }
 
 // Diferenciais do Aplicativo
+// Diferenciais do Aplicativo
 #differentials {
     padding: 50px 20px;
     background-color: $background-color;
@@ -207,31 +208,33 @@ body {
         color: $text-color;
     }
 
-    .differentials-list {
-        list-style: none;
-        padding: 0;
-        max-width: 600px;
+    .differentials-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 1200px;
         margin: 0 auto;
-        text-align: left;
 
-        li {
-            font-size: 1.2rem;
-            margin: 15px 0;
-            position: relative;
-            padding-left: 25px;
-            color: $text-color;
+        .differential-item {
+            background-color: $secondary-color;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
 
-            &:before {
-                content: '•';
-                position: absolute;
-                left: 0;
-                top: 0;
+            h3 {
                 font-size: 1.5rem;
-                color: $highlight-color;
+                margin-bottom: 10px;
+                color: $primary-color;
+            }
+
+            p {
+                color: color.adjust($text-color, $lightness: 20%);
+                font-size: 1rem;
             }
         }
     }
 }
+
 
 // Contato
 #contact {
